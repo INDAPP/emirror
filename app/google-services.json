@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "621057375815",
+    "firebase_url": "https://emirror-c6bf0.firebaseio.com",
+    "project_id": "emirror-c6bf0",
+    "storage_bucket": "emirror-c6bf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621057375815:android:bd3a81b37cff0741",
+        "android_client_info": {
+          "package_name": "it.droidcon.emirror"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621057375815-nb9k287t6mimhq44lbc7paanrm2plamo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.droidcon.emirror",
+            "certificate_hash": "b8cef960e846b8d84487186b2a9bf2a923f27eda"
+          }
+        },
+        {
+          "client_id": "621057375815-gsqamtvldd8kmmpnmhltr4dk45qhengs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAydyf6RYUlzzNwhRGU39ALLEPDGbtchSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621057375815-gsqamtvldd8kmmpnmhltr4dk45qhengs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
