@@ -55,7 +55,7 @@ class MirrorActivity : AppCompatActivity() {
         cameraConfig = RxCameraConfig.Builder()
                 .setHandleSurfaceEvent(true)
                 .useBackCamera()
-                .setAutoFocus(true)
+                //.setAutoFocus(true)
                 .setPreferPreviewFrameRate(15,30)
                 .setPreferPreviewSize(Point(1920,1080), false)
                 .build()
