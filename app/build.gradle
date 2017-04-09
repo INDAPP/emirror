@@ -2,6 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+repositories {
+    maven {
+        url  "http://dl.bintray.com/udooboard/maven"
+    }
+}
+
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -40,6 +47,8 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:10.0.1'
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-vision:10.0.1'
+    compile 'org.udoo:udooandroidserial:0.2.1'
+
 }
 repositories {
     jcenter()
