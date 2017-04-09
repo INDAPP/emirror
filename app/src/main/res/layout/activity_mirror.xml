@@ -11,4 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
 </FrameLayout>

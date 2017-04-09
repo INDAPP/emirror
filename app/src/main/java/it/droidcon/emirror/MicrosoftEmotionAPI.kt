@@ -1,10 +1,9 @@
 package it.droidcon.emirror
 
 import it.droidcon.emirror.model.Entry
-import io.reactivex.Observable
-import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
+import rx.Observable
 
 /**
  * This class is part of Emirror project.

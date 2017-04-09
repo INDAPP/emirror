@@ -1,15 +1,13 @@
 package it.droidcon.emirror
 
 import android.content.Context
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.squareup.moshi.Moshi
-import io.reactivex.Observable
 import it.droidcon.emirror.model.Entry
-import okhttp3.MultipartBody
-import okhttp3.OkHttpClient
 import okhttp3.RequestBody
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
+import rx.Observable
 
 /**
  * This class is part of Emirror project.
@@ -35,7 +33,7 @@ class Client<T> (val endpoints : T) {
             val microsoftApi = Retrofit.Builder()
                     .baseUrl("https://westus.api.cognitive.microsoft.com/emotion/v1.0/")
                     .addConverterFactory(MoshiConverterFactory.create(moshi))
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     //.client(microsoftClient)
                     .build()
                     .create(MicrosoftEmotionAPI::class.java)

@@ -30,20 +30,18 @@ dependencies {
 
     compile "com.squareup.retrofit2:retrofit:$retrofit_version"
     compile "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    compile "com.squareup.retrofit2:adapter-rxjava:2.0.0"
     compile "com.squareup.moshi:moshi:$moshi_version"
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    //compile 'com.ragnarok.rxcamera:lib:0.0.5'
-    compile 'com.github.lucas34:RxCamera:0bafd22'
-    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    compile 'com.google.firebase:firebase-storage:10.0.1'
-    compile 'com.google.firebase:firebase-auth:10.0.1'
+    compile 'com.ragnarok.rxcamera:lib:0.0.5'
+    //compile 'com.github.lucas34:RxCamera:0bafd22'
+    //compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.google.android.gms:play-services-vision:10.0.1'
+    compile "com.polidea.rxandroidble:rxandroidble:1.2.0"
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
 }
 repositories {
     jcenter()
     maven { url "https://jitpack.io" }
 }
-
-apply plugin: 'com.google.gms.google-services'
