@@ -73,6 +73,7 @@ class MirrorActivity : AppCompatActivity(), Player.NotificationCallback, Connect
     var emotions: Scores? = null
         set(value) {
             field = value
+            EmotionLedService.startActionLed(this, "happiness")
             startRequest()
         }
     var spotifySession: String? = null
@@ -108,7 +109,7 @@ class MirrorActivity : AppCompatActivity(), Player.NotificationCallback, Connect
                 .flatMap { it.bindTexture(textureView) }
                 .flatMap { it.startPreview() }
 
-        handleFinish()
+        //handleFinish()
 
         bleClient = RxBleClient.create(this)
     }
@@ -134,6 +135,7 @@ class MirrorActivity : AppCompatActivity(), Player.NotificationCallback, Connect
         super.onDestroy()
         camera?.closeCamera()
         Spotify.destroyPlayer(this)
+        camera = null
     }
 
     fun onPermissionCamera(granted: Boolean) {
@@ -230,7 +232,7 @@ class MirrorActivity : AppCompatActivity(), Player.NotificationCallback, Connect
 
     fun onRecognitionSuccess(entries: List<Entry>) {
         Log.i(TAG, entries.toString())
-        handleFinish()
+        //handleFinish()
         if (entries.isNotEmpty()) {
             Toast.makeText(this, "Recognition success!!", Toast.LENGTH_LONG).show()
             emotions = entries.maxBy { it.faceRectangle.height * it.faceRectangle.width }?.scores

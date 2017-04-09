@@ -14,8 +14,8 @@ import rx.Observable
  */
 interface EmirrorApi {
     @Headers("Content-Type: application/json")
-    @POST("emotion?jsessionid={session}")
-    fun emotions(@Path("session") session: String, @Body scores: Scores) : Observable<List<Track>>
+    @POST("emotion")
+    fun emotions(@Path("jsessionid") session: String, @Body scores: Scores) : Observable<List<Track>>
 
     @GET("code")
     fun code(@Path("jsessionid") session: String) : Observable<AuthCode>
