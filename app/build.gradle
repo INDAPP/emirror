@@ -49,11 +49,18 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
 //    compile 'com.google.android.gms:play-services-vision:10.0.1'
     compile 'org.udoo:udooandroidserial:0.2.1'
-
+    compile ('io.socket:socket.io-client:0.8.3') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
 }
 repositories {
     jcenter()
     maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 //apply plugin: 'com.google.gms.google-services'

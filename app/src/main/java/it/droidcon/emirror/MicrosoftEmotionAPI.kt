@@ -14,5 +14,5 @@ import rx.Observable
 interface MicrosoftEmotionAPI {
     @Headers("Content-Type: application/octet-stream")
     @POST("recognize")
-    fun recognize(@Header("Ocp-Apim-Subscription-Key") key: String, @Body photo : RequestBody) : Observable<List<Entry>>
+    fun recognize(@Body photo : RequestBody) : Observable<List<Entry>>
 }
