@@ -7,4 +7,9 @@
     tools:context="it.droidcon.emirror.BootActivity"
     android:background="#888888">
 
+
+    <WebView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>

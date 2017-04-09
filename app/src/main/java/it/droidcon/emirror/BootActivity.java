@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
 import org.udoo.udooandroidserial.OnResult;
@@ -18,6 +19,7 @@ public class BootActivity extends AppCompatActivity {
     private UdooASManager mArduinoManager;
     private final String TAG = this.getClass().getSimpleName();
     private RelativeLayout rootLayout;
+    private WebView mWebView;
 
 
     @Override
@@ -31,6 +33,8 @@ public class BootActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_boot);
         rootLayout = (RelativeLayout) findViewById(R.id.root_layout);
+
+        mWebView = (WebView)findViewById(R.id.video_view);
     }
 
     @Override
@@ -69,6 +73,11 @@ public class BootActivity extends AppCompatActivity {
                 });
             }
         });
+
+//        mWebView.getSettings().setJavaScriptEnabled(true);
+//        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
+//        mWebView.loadUrl("http://www.youtube.com/embed/" + "5vOU6-1yNZs" + "?autoplay=1&vq=small");
+//        mWebView.setWebChromeClient(new WebChromeClient());
     }
 
     @Override
