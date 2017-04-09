@@ -34,7 +34,7 @@ public class BootActivity extends AppCompatActivity {
         setContentView(R.layout.activity_boot);
         rootLayout = (RelativeLayout) findViewById(R.id.root_layout);
 
-        mWebView = (WebView)findViewById(R.id.video_view);
+        mWebView = (WebView) findViewById(R.id.video_view);
     }
 
     @Override
@@ -52,7 +52,10 @@ public class BootActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(final Integer o) {
                         Log.d(TAG, "Successfully read PIR with value " + o);
+                        EmotionLedService.startActionLed(BootActivity.this, "no");
                         startActivity(new Intent(BootActivity.this, MirrorActivity.class));
+
+
                         rootLayout.post(new Runnable() {
                             @Override
                             public void run() {
@@ -73,11 +76,6 @@ public class BootActivity extends AppCompatActivity {
                 });
             }
         });
-
-//        mWebView.getSettings().setJavaScriptEnabled(true);
-//        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
-//        mWebView.loadUrl("http://www.youtube.com/embed/" + "5vOU6-1yNZs" + "?autoplay=1&vq=small");
-//        mWebView.setWebChromeClient(new WebChromeClient());
     }
 
     @Override
